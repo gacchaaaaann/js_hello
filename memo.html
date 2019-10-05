@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <title><title> @<head></title>
+  </head>
+
+
+
+  <body>
+    
+  <script>
+
+    document.write("document.write(\"\");");
+    alert("alert(\"\");");
+
+  </script>
+
+
+  <div id="X"></div>
+
+  
+  <script>
+
+    document.getElementById("X").innerHTML = "<br>document.getElementById(\"X\").innerHTML = \"\"; <br>位置指定：&lt;div id=\"X\">&lt;/div> <br>位置指定は本体より先にいなくてはいけないし，&lt;script>&lt;/script>の中にいてもいけない．";
+
+    console.log("console.log(\"\");");
+
+    
+    <!-- 以下メモゾーン -->
+
+    document.write("<br><br>"+
+
+        "コメントアウトは &lt;!--コメント--><br><br>"+
+
+        "改行は &lt;br>\t(\\nはhtmlに組み込む時は使えない)<br>"+
+        "各コマンドの引数の末尾の&lt;br>は無視される．<br>"+
+        "但し\\tは有効<br><br>"+
+
+        "&lt; は &amp;lt;<br>"+
+        "&amp; は &amp;amp;<br><br>"+
+
+        "\\\"\tはエスケープ<br>"+
+        ";>!+\tのエスケープは必要ない<br><br>"+
+
+        "変数に代入するテキストを複数行にするには，各行毎に\"\"でくくり +で繋ぐ<br><br>"
+        
+        );
+
+  </script>
+
+  </body>
+
+</html>
