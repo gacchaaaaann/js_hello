@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title> clock </title>
+  </head>
+
+
+  <body>
+  </body>
+
+
+  <script>
+    dd = new Date();
+    document.write("最終更新時刻："+dd.toLocaleString());
+
+    window.onload = function(){
+
+      setInterval(function(){
+
+        var d = new Date();
+        document.getElementById("T1").innerHTML = "現在時刻："+d.toLocaleString();
+      
+      }, 1000);
+    
+    }  
+  </script>
+
+
+  <div id = "T1"> </div>
+
+</html>

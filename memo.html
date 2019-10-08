@@ -22,7 +22,7 @@
   
   <script>
 
-    document.getElementById("X").innerHTML = "<br>document.getElementById(\"X\").innerHTML = \"\"; <br>位置指定：&lt;div id=\"X\">&lt;/div> <br>位置指定は本体より先にいなくてはいけないし，&lt;script>&lt;/script>の中にいてもいけない．";
+    document.getElementById("X").innerHTML = "<br>document.getElementById(\"X\").innerHTML = \"\"; <br>位置指定：&lt;div id=\"X\">&lt;/div> <br>&lt;script>&lt;/script>の中にいてもいけない．(位置指定は本体より先にいなくてはいけないことはないらしい)";
 
     console.log("console.log(\"\");");
 
@@ -40,10 +40,45 @@
         "&lt; は &amp;lt;<br>"+
         "&amp; は &amp;amp;<br><br>"+
 
-        "\\\"\tはエスケープ<br>"+
-        ";>!+\tのエスケープは必要ない<br><br>"+
+        "エスケープ：\t\\\"<br>"+
+        "エスケープ不必要：\t;>!+<br><br>"+
 
-        "変数に代入するテキストを複数行にするには，各行毎に\"\"でくくり +で繋ぐ<br><br>"
+        "\\n，文頭の\\t，文中の空白，コマンド末の&lt;br>&ensp;は無視される<br><br>"+
+
+        "変数に代入するテキストを複数行にするには，各行毎に\"\"でくくり +で繋ぐ<br><br>"+
+
+        "空白：&amp;thinsp;\t＜\t&amp;nbsp;\t＜\t&amp;ensp;\t＜\t&amp;emsp;<br><br>"+
+
+        "日付や時刻：Date()&ensp;(ex: var d = new Date();)<br><br>"+
+
+        "1秒(1000ms)毎に同じ処理を行う：<br>"+
+        "window.onload = function(){<br>"+
+        "&ensp;setInterval(function(){<br>"+ 
+        "&ensp;&ensp;処理<br>"+
+        "&ensp;}, 1000);<br>"+
+        "}<br><br>"+
+      
+
+        
+        
+      
+      
+ 
+
+        
+
+
+        "<br>===テンプレ===<br><br>"+
+
+        "&lt;!DOCTYPE html><br>"+
+        "&lt;html><br><br>"+
+
+        "&lt;head><br>"+
+        "&lt;title>\t&lt;/title><br>"+
+        "&lt;/head><br><br>"+
+
+        "&lt;body><br>&ensp;&lt;script><br>&ensp;&lt;/script><br>&lt;/body><br><br>"+
+        "&lt;/html><br><br>"
         
         );
 
