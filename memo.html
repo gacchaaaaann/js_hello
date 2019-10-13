@@ -12,77 +12,86 @@
   <script>
 
     document.write("document.write(\"\");");
+
     alert("alert(\"\");");
+
+    console.log("console.log(\"\");");
 
   </script>
 
 
-  <div id="X"></div>
+  <!-- 以下 サンプルゾーン -->
+
+  <div id="X"></div>  <br>
+
+  <div id="clock"></div>  <br>
+
+  <br>
+  <br>
+  <br>
 
   
   <script>
 
     document.getElementById("X").innerHTML = "<br>document.getElementById(\"X\").innerHTML = \"\"; <br>位置指定：&lt;div id=\"X\">&lt;/div> <br>&lt;script>&lt;/script>の中にいてもいけない．(位置指定は本体より先にいなくてはいけないことはないらしい)";
 
-    console.log("console.log(\"\");");
+  </script>
 
     
-    <!-- 以下メモゾーン -->
+  <!-- 以下 HTML メモゾーン -->
 
-    document.write("<br><br>"+
+  =HTML=<br><br>
 
-        "コメントアウトは &lt;!--コメント--><br><br>"+
+  コメントアウトは &lt;!--コメント--><br><br>
 
-        "改行は &lt;br>\t(\\nはhtmlに組み込む時は使えない)<br>"+
-        "各コマンドの引数の末尾の&lt;br>は無視される．<br>"+
-        "但し\\tは有効<br><br>"+
+  改行は &lt;br> (\nはhtmlに組み込む時は使えない)<br>
 
-        "&lt; は &amp;lt;<br>"+
-        "&amp; は &amp;amp;<br><br>"+
+  &lt; は &amp;lt;<br>
+  &amp; は &amp;amp;<br><br>
 
-        "エスケープ：\t\\\"<br>"+
-        "エスケープ不必要：\t;>!+<br><br>"+
+  エスケープ： \"<br>
+  エスケープ不必要： ;>!+<br><br>
 
-        "\\n，文頭の\\t，文中の空白，コマンド末の&lt;br>&ensp;は無視される<br><br>"+
-
-        "変数に代入するテキストを複数行にするには，各行毎に\"\"でくくり +で繋ぐ<br><br>"+
-
-        "空白：&amp;thinsp;\t＜\t&amp;nbsp;\t＜\t&amp;ensp;\t＜\t&amp;emsp;<br><br>"+
-
-        "日付や時刻：Date()&ensp;(ex: var d = new Date();)<br><br>"+
-
-        "1秒(1000ms)毎に同じ処理を行う：<br>"+
-        "window.onload = function(){<br>"+
-        "&ensp;setInterval(function(){<br>"+ 
-        "&ensp;&ensp;処理<br>"+
-        "&ensp;}, 1000);<br>"+
-        "}<br><br>"+
-      
-
-        
-        
-      
-      
- 
-
-        
+  空白：&amp;thinsp;"&thinsp;" ＜ &amp;nbsp;"&nbsp;" ＜ &amp;ensp;"&ensp;" ＜ &amp;emsp;"&emsp;"<br><br>
 
 
-        "<br>===テンプレ===<br><br>"+
 
-        "&lt;!DOCTYPE html><br>"+
-        "&lt;html><br><br>"+
+  <!--Hello.js, read_js.html-->
 
-        "&lt;head><br>"+
-        "&lt;title>\t&lt;/title><br>"+
-        "&lt;/head><br><br>"+
+  別立てのjsファイルを取り込む：含まれている関数を呼び出すことができる．<br>
+  &lt;script src="hoge.js">&lt;/script><br><br>
 
-        "&lt;body><br>&ensp;&lt;script><br>&ensp;&lt;/script><br>&lt;/body><br><br>"+
-        "&lt;/html><br><br>"
-        
-        );
+  ボタン： &lt;input type="button"><br>
+  -オプション：複数繋げる時は空白区切り<br>
+  &ensp;value="ボタンに表示する文字"<br>
+  -イベントハンドラ：オプションとして使う．JavaScriptは""でくくる．オプションは()でくくる．<br>
+  &ensp;onClick=クリックされた時に行う処理<br>
+  &ensp;onMouseOver=マウスが重なった時に行う処理<br>
+  &ensp;onMouseOut=マウスが離れた時に行う処理<br>
+  &ensp;onMouseDown=マウスが押された時<br><br>
 
-  </script>
+  URL記述： &lt;a href="javascript:JavaScriptの命令文(;はいらない)"> 表示する文言(括らない) &lt;/a><br><br><br>
+
+
+  <!--以下 JavaScript メモゾーン-->
+
+  <script src="memo.js"></script>
+
+
+  
+
+
+  <br>===テンプレ===<br><br>
+
+  &lt;!DOCTYPE html><br>
+  &lt;html><br><br>
+
+  &lt;head><br>
+  &lt;title> &lt;/title><br>
+  &lt;/head><br><br>
+
+  &lt;body><br>&ensp;&lt;script><br>&ensp;&lt;/script><br>&lt;/body><br><br>
+  &lt;/html><br><br>
 
   </body>
 
